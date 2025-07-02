@@ -185,7 +185,7 @@ footer {
   display: flex;
   position: fixed;
   bottom: 5px;
-  right: 3px;
+  right: 6px;
   padding: 3vh 2vw 3vh 2vw;
   z-index: 3;
   font-size: xx-large;
