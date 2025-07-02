@@ -145,7 +145,7 @@ footer {
 .telephone {
   display: flex;
   align-items: center;
-  margin-left: 3.5vh;
+  margin-left: 4vh;
 }
 .img-coordonnees {
   max-width: 4vw;
@@ -158,7 +158,7 @@ footer {
   color: #ded7f4;
 }
 .email {
-  margin-left: 3.5vh;
+  margin-left: 4vh;
   display: flex;
   align-items: center;
 }
@@ -244,6 +244,12 @@ footer {
     justify-content: center;
     align-items: center;
   }
+.email-footer {
+width: 90vw;
+}
+.tel-footer {
+width: 90vw;
+}
   .reseaux-footer {
     display: flex;
     flex-direction: row;
