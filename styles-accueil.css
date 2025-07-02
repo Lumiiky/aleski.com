@@ -131,10 +131,10 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
 }
 .coordonnees-footer {
   padding: 5vh 0 10vh 5vh;
+width:100vw;
 }
 .tel-footer {
   display: flex;
