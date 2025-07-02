@@ -134,7 +134,6 @@ footer {
 }
 .coordonnees-footer {
   padding: 5vh 0 10vh 5vh;
-width:100vw;
 }
 .tel-footer {
   display: flex;
@@ -146,7 +145,7 @@ width:100vw;
 .telephone {
   display: flex;
   align-items: center;
-  margin-left: 4vh;
+  margin-left: 3.5vh;
 }
 .img-coordonnees {
   max-width: 4vw;
@@ -159,7 +158,7 @@ width:100vw;
   color: #ded7f4;
 }
 .email {
-  margin-left: 4vh;
+  margin-left: 3.5vh;
   display: flex;
   align-items: center;
 }
