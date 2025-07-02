@@ -244,12 +244,6 @@ footer {
     justify-content: center;
     align-items: center;
   }
-.email-footer {
-width: 60vw;
-}
-.tel-footer {
-width: 60vw;
-}
   .reseaux-footer {
     display: flex;
     flex-direction: row;
