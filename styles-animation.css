@@ -1,6 +1,18 @@
 html {
   scroll-behavior: smooth;
 }
+:root {
+  --c-text: #ded7f4;
+  --c-background: #1f1f1f;
+  --c-primary: #47354d;
+  --c-img: transparent;
+}
+:root:has(#mode-clair-checkbox:checked) {
+  --c-text: #1f1f1f;
+  --c-background: #ded7f4;
+  --c-primary: #ad73c1;
+  --c-img: #ad73c1;
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,18 +20,18 @@ html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
-  color: #ded7f4;
-  scrollbar-color: #ded7f4 #1f1f1f;
-  /* background-color: #1f1f1f; */
+  color: var(--c-text);
+  scrollbar-color: var(--c-text) var(--c-background);
+  scrollbar-width: 2px;
 }
 *:focus {
-  outline: 2px solid #ded7f4;
+  outline: 2px solid var(--c-text);
   border-radius: 10px;
 }
 
 /* FOOTER */
 footer {
-  background: linear-gradient(#1f1f1f 3%, #47354d);
+  background: linear-gradient(var(--c-background) 3%, var(--c-primary));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +49,7 @@ footer {
   flex-direction: row;
   font-size: 4vh;
   padding-bottom: 3vh;
-  color: #ded7f4;
+  color: var(--c-text);
 }
 .telephone {
   display: flex;
@@ -47,12 +59,14 @@ footer {
 .img-coordonnees {
   max-width: 4vw;
   max-height: auto;
+  background-color: var(--c-img);
+  border-radius: 10px;
 }
 .email-footer {
   display: flex;
   flex-direction: row;
   font-size: 4vh;
-  color: #ded7f4;
+  color: var(--c-text);
 }
 .email {
   margin-left: 4vh;
@@ -75,6 +89,8 @@ footer {
   display: flex;
   max-width: 4vw;
   margin: 3vh;
+  background-color: var(--c-img);
+  border-radius: 10px;
   transition: background-color 1s, padding 1s, border-radius 1s;
 }
 /* HEADER Animation */
@@ -85,7 +101,7 @@ footer {
   align-items: center;
   height: 60vh;
   padding: 6vh 0 20vh 0;
-  background: linear-gradient(#47354d 60%, #1f1f1f);
+  background: linear-gradient(var(--c-primary) 60%, var(--c-background));
   overflow: hidden;
 }
 .titre-header-animations {
@@ -107,7 +123,7 @@ footer {
   text-decoration: none;
   margin: 4vh 2vh 4vh 2vh;
   padding: 2vh;
-  color: #ded7f4;
+  color: var(--c-text);
   transition: background-color 1s, padding 1s, border-radius 1s;
 }
 .lien-animations-header-animations {
@@ -115,8 +131,8 @@ footer {
   text-decoration: none;
   margin: 4vh 2vh 4vh 2vh;
   padding: 2vh;
-  color: #ded7f4;
-  border: solid 0.5vh #ded7f4;
+  color: var(--c-text);
+  border: solid 0.5vh var(--c-text);
   border-radius: 10px;
   transition: background-color 1s, padding 1s, border-radius 1s;
 }
@@ -126,7 +142,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1f1f1f;
+  background-color: var(--c-background);
 }
 .description-animations {
   display: flex;
@@ -148,22 +164,37 @@ footer {
   align-items: center;
   background: radial-gradient(
         circle at 100% 100%,
-        #1f1f1f 0,
-        #1f1f1f 4px,
+        var(--c-background) 0,
+        var(--c-background) 4px,
         transparent 4px
       )
       0% 0%/8px 8px no-repeat,
-    radial-gradient(circle at 0 100%, #1f1f1f 0, #1f1f1f 4px, transparent 4px)
+    radial-gradient(
+        circle at 0 100%,
+        var(--c-background) 0,
+        var(--c-background) 4px,
+        transparent 4px
+      )
       100% 0%/8px 8px no-repeat,
-    radial-gradient(circle at 100% 0, #1f1f1f 0, #1f1f1f 4px, transparent 4px)
+    radial-gradient(
+        circle at 100% 0,
+        var(--c-background) 0,
+        var(--c-background) 4px,
+        transparent 4px
+      )
       0% 100%/8px 8px no-repeat,
-    radial-gradient(circle at 0 0, #1f1f1f 0, #1f1f1f 4px, transparent 4px) 100%
-      100%/8px 8px no-repeat,
-    linear-gradient(#1f1f1f, #1f1f1f) 50% 50% / calc(100% - 8px)
-      calc(100% - 16px) no-repeat,
-    linear-gradient(#1f1f1f, #1f1f1f) 50% 50% / calc(100% - 16px)
-      calc(100% - 8px) no-repeat,
-    linear-gradient(transparent 0%, #ded7f4 100%);
+    radial-gradient(
+        circle at 0 0,
+        var(--c-background) 0,
+        var(--c-background) 4px,
+        transparent 4px
+      )
+      100% 100%/8px 8px no-repeat,
+    linear-gradient(var(--c-background), var(--c-background)) 50% 50% /
+      calc(100% - 8px) calc(100% - 16px) no-repeat,
+    linear-gradient(var(--c-background), var(--c-background)) 50% 50% /
+      calc(100% - 16px) calc(100% - 8px) no-repeat,
+    linear-gradient(transparent 0%, var(--c-text) 100%);
   border-radius: 8px;
   padding: 8px;
   box-sizing: border-box;
@@ -206,10 +237,14 @@ footer {
   position: fixed;
   bottom: 5px;
   right: 3px;
-  padding: 3vh 2vw 3vh 2vw;
+  padding: 2vh 2vw;
   z-index: 3;
+  color: var(--c-text);
+  background-color: var(--c-primary);
+  border-radius: 10px;
   font-size: xx-large;
   text-decoration: none;
+  transition: padding 1s;
 }
 /* RESPONSIVE ---------------------
 -------------------------------- */
@@ -252,6 +287,9 @@ footer {
       opacity: 0;
     }
   }
+  .bouton-header {
+    color: #ded7f4;
+  }
   div > #navbar-liens {
     display: none;
   }
@@ -268,6 +306,7 @@ footer {
   #menu-logo {
     display: flex;
     font-size: xx-large;
+    color: #ded7f4;
   }
   .description-animations {
     width: 90vw;
@@ -313,7 +352,7 @@ footer {
 ---------------------------------- */
 
 .bouton-header:hover {
-  background-color: #47354d;
+  background-color: var(--c-primary);
   border-radius: 10px;
   transition-duration: 0.4s;
   padding: 3vh;
@@ -326,10 +365,41 @@ footer {
   padding: 1vh;
 }
 .lien-animations-header-animations:hover {
-  background-color: #47354d;
+  background-color: var(--c-primary);
   border-radius: 10px;
   transition-duration: 0.4s;
   padding: 3vh;
   transition-timing-function: ease;
 }
-/* REMINDER : UNE LEGERE BORDER AUTOUR DES CASES-ANIMATIONS */
+.home:hover {
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  padding: 3vh 3vw;
+  transition-timing-function: ease;
+}
+/* MODE CLAIR */
+#mode-clair {
+  display: flex;
+  z-index: 2;
+  position: absolute;
+  top: 4vh;
+  right: 3vw;
+  background-color: var(--c-background);
+  border: solid 2px var(--c-text);
+  border-radius: 10px;
+  padding: 1vh;
+  transition: background-color 1s, padding 1s, border-radius 1s;
+}
+#soleil-lune {
+  display: flex;
+  font-size: xx-large;
+}
+#mode-clair:hover {
+  background-color: var(--c-primary);
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  padding: 1vh;
+}
+#mode-clair-checkbox {
+  display: none;
+}
