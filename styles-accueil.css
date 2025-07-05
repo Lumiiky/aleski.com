@@ -271,7 +271,26 @@ footer {
   }
   .coordonnees-footer {
     padding: 5vh 0 5vh 0;
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-content: center;
   }
+  .email {
+  font-size: 3vh;
+  word-break: break-word;
+  max-width: 90vw;
+  text-align: center;
+  margin-left: 1.5vh;
+}
+.telephone {
+  font-size: 3vh;
+  word-break: break-word;
+  max-width: 90vw;
+  text-align: center;
+  margin-left: 1.5vh;
+
+}
   .img-coordonnees {
     max-width: 7vw;
     max-height: auto;
@@ -279,7 +298,7 @@ footer {
   .image-reseau {
     display: flex;
     max-width: 15vw;
-    margin: 2vh;
+    margin: 1.5vh;
   }
   #navbar {
     display: flex;
@@ -333,6 +352,15 @@ footer {
     filter: brightness(80%);
   }
 }
+/* @media only screen and (max-width: 255) and (min-width: 0) {
+  .coordonnees-footer {
+    overflow:scroll;
+    width: 100vw;
+  }
+  .telephone {
+    font-size: 1vh;
+  }
+} */
 /* ANIMATIONS-----------------------$
 ---------------------------------- */
 
